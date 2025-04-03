@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Personal - Editar Empleados</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Editar Empleados</h1>
+    </header>
+    
+    <main>
+        <div class="form-group">
+            <label for="empleado_id">ID del Empleado:</label>
+            <input type="number" id="empleado_id" name="empleado_id" placeholder="Ej: 1">
+            <button id="cargar-datos">Cargar Datos</button>
+        </div>
+
+        <form id="form-empleados" method="POST" action="php/registrar_empleados.php">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ej: Pérez" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" placeholder="Ej: 12345678" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" name="cargo" placeholder="Ej: Piloto" required>
+            </div>
+
+            <div class="form-group">
+                <label for="departamento">Departamento:</label>
+                <input type="text" id="departamento" name="departamento" placeholder="Ej: Operaciones" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_contratacion">Fecha de Contratación (opcional):</label>
+                <input type="date" id="fecha_contratacion" name="fecha_contratacion">
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono (opcional):</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Ej: 123-456-7890">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email (opcional):</label>
+                <input type="email" id="email" name="email" placeholder="Ej: juan@example.com">
+            </div>
+
+            <button type="submit" name="accion" value="editar">Guardar Cambios</button>
+        </form>
+
+        <div id="mensaje"></div>
+        <a href="gestion_personal.html" class="btn-volver">Volver al Menú</a>
+    </main>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

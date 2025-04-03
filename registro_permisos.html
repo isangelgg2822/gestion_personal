@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Permisos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Permisos</h1>
+    </header>
+    
+    <main>
+        <form id="form-permisos" method="POST" action="php/registrar_permisos.php">
+            <div class="form-group">
+                <label for="empleado_id">ID del Empleado:</label>
+                <input type="number" id="empleado_id" name="empleado_id" placeholder="Ej: 1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tipo_ausencia">Tipo de Ausencia:</label>
+                <select id="tipo_ausencia" name="tipo_ausencia" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Vacaciones">Vacaciones</option>
+                    <option value="Enfermedad">Enfermedad</option>
+                    <option value="Permiso Personal">Permiso Personal</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_inicio">Fecha de Inicio:</label>
+                <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_fin">Fecha de Fin:</label>
+                <input type="date" id="fecha_fin" name="fecha_fin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción (opcional):</label>
+                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Detalles del permiso"></textarea>
+            </div>
+
+            <button type="submit" name="accion" value="registrar">Registrar Permiso</button>
+        </form>
+
+        <button id="ver-historial-permisos">Ver Historial de Permisos</button>
+
+        <div id="mensaje"></div>
+        <a href="registro_asistencia.html" class="btn-volver">Volver al Menú</a>
+        <div id="historial-permisos"></div>
+    </main>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
