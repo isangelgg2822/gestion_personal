@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Horarios - Asignar Horarios</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-page="gestion-horarios">
+    <header>
+        <h1><i class="fas fa-user-clock"></i> Asignar Horarios</h1>
+    </header>
+    
+    <main>
+        <form id="form-horarios" method="POST" action="php/registrar_horarios.php">
+            <div class="form-group">
+                <label for="empleado_id">ID del Empleado (dejar vacío para grupo):</label>
+                <input type="number" id="empleado_id" name="empleado_id" placeholder="Ej: 1">
+            </div>
+            <div class="form-group">
+                <label for="horario_id">ID del Horario:</label>
+                <input type="number" id="horario_id" name="horario_id" placeholder="Ej: 1" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_inicio">Fecha de Inicio:</label>
+                <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_fin">Fecha de Fin (opcional):</label>
+                <input type="date" id="fecha_fin" name="fecha_fin">
+            </div>
+            <button type="submit" name="accion" value="asignar">Asignar Horario</button>
+        </form>
+
+        <div id="mensaje"></div>
+        <a href="horarios.html" class="btn-volver"><i class="fas fa-arrow-left"></i> Volver</a>
+    </main>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

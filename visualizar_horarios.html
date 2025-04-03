@@ -2,25 +2,25 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Gestión de Personal - Consultar Empleados</title>
+    <title>Gestión de Horarios - Visualizar Horarios</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body data-page="consultar-empleados">
+<body data-page="visualizar-horarios">
     <header>
-        <h1>Consultar Empleados</h1>
+        <h1><i class="fas fa-eye"></i> Visualizar Horarios</h1>
     </header>
     
     <main>
         <div class="form-group">
-            <label for="buscar-empleado">Buscar Empleado (por nombre, apellido o cédula):</label>
-            <input type="text" id="buscar-empleado" placeholder="Ej: Juan, Pérez, 12345678">
+            <label for="empleado_id">ID del Empleado (dejar vacío para todos):</label>
+            <input type="number" id="empleado_id" placeholder="Ej: 1">
             <button id="buscar">Buscar</button>
         </div>
 
         <div id="resultado-busqueda"></div>
-        <a href="gestion_personal.html" class="btn-volver">Volver al Menú</a>
+        <a href="horarios.html" class="btn-volver"><i class="fas fa-arrow-left"></i> Volver</a>
     </main>
 
     <script src="js/scripts.js"></script>
