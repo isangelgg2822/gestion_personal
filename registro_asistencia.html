@@ -17,6 +17,7 @@
         <div class="menu-opciones">
             <a href="registro_asistencia.html" class="btn-opcion">Registrar Asistencia</a>
             <a href="registro_permisos.html" class="btn-opcion">Registrar Permisos</a>
+
          
 
         </div>
@@ -43,8 +44,11 @@
 
             <button type="submit" name="accion" value="registrar">Registrar</button>
         </form>
-
-        <button id="ver-historial">Ver Historial de Asistencia</button>
+        <div class="form-group" id="historial-form">
+            <label for="empleado_id_historial">ID del Empleado (Historial):</label>
+            <input type="text" id="empleado_id_historial" name="empleado_id_historial" placeholder="Ej: 1">
+            <button type="button" id="ver-historial">Ver Historial</button>
+        </div>
 
         <div id="mensaje"></div>
         <a href="index.html" class="btn-volver">Volver al Menú Principal</a>

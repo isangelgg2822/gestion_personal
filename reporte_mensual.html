@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Bibliotecas para exportación -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body data-page="reporte-mensual">
     <header>
@@ -21,10 +25,10 @@
             <button id="generar-reporte">Generar Reporte</button>
         </div>
 
-        <div id="resultado-reporte"></div>
+      <div id="resultado-reporte"></div>
         <div class="export-buttons">
-            <button id="export-pdf">Exportar a PDF</button>
-            <button id="export-excel">Exportar a Excel</button>
+            <button id="exportar-pdf">Exportar a PDF</button>
+            <button id="exportar-excel">Exportar a Excel</button>
         </div>
         <a href="reportes.html" class="btn-volver"><i class="fas fa-arrow-left"></i> Volver</a>
     </main>

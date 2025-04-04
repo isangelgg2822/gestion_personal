@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hora_salida = !empty($_POST['hora_salida']) ? $_POST['hora_salida'] : null;
     $accion = isset($_POST['accion']) ? $_POST['accion'] : '';
 
-    echo "Debug: empleado_id = $empleado_id, fecha = $fecha, hora_entrada = $hora_entrada, hora_salida = $hora_salida, accion = $accion<br>";
+    // echo "Debug: empleado_id = $empleado_id, fecha = $fecha, hora_entrada = $hora_entrada, hora_salida = $hora_salida, accion = $accion<br>";
 
     // Validación: Verificar si el empleado existe
     $stmt = $pdo->prepare("SELECT COUNT(*) FROM empleados WHERE id = ?");
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $registro = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($registro) {
-            echo "Debug: Registro encontrado, ID = " . $registro['id'] . ", hora_salida actual = " . $registro['hora_salida'] . "<br>";
+            // echo "Debug: Registro encontrado, ID = " . $registro['id'] . ", hora_salida actual = " . $registro['hora_salida'] . "<br>";
             // Si ya existe un registro, actualizar la hora de salida si se proporciona
             if ($hora_salida && !$registro['hora_salida']) {
                 $stmt = $pdo->prepare("UPDATE asistencia SET hora_salida = ? WHERE id = ?");
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo "Error: Ya existe un registro completo para esta fecha o no se proporcionó hora de salida";
             }
         } else {
-            echo "Debug: No se encontró registro previo<br>";
+            // echo "Debug: No se encontró registro previo<br>";
             // Si no existe, crear un nuevo registro con hora de entrada
             if ($hora_entrada) {
                 $stmt = $pdo->prepare("INSERT INTO asistencia (empleado_id, fecha, hora_entrada, hora_salida) VALUES (?, ?, ?, ?)");
